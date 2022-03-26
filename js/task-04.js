@@ -1,14 +1,16 @@
-const velueEl = document.querySelector("#value");
-const butonsEl = document.querySelectorAll("#counter button");
-//console.dir(velueEl);
-velueEl.textContent = 0;
+const velueEl = document.querySelector('#value');
+const butonsEl = document.querySelector('#counter');
 
-butonsEl[0].addEventListener('click', event => {
-   // console.log(event);
-          velueEl.textContent = parseInt(velueEl.textContent) - 1;
+//console.dir(velueEl);
+/* velueEl.textContent = 0; */
+let counter = 0;
+
+butonsEl.firstElementChild.addEventListener('click', event => {
+  // console.log(event);
+  velueEl.textContent = counter -= 1;
 });
 
-butonsEl[1].addEventListener('click', event => {
-    //console.log(event);
-      velueEl.textContent = parseInt(velueEl.textContent) + 1;
+butonsEl.lastElementChild.addEventListener('click', event => {
+  //console.log(event);
+  velueEl.textContent = counter += 1;
 });

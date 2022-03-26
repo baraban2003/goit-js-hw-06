@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const ingredients = [
   'Potatoes',
@@ -7,16 +7,17 @@ const ingredients = [
   'Tomatos',
   'Herbs',
   'Condiments',
-  ];
-const listOfIngredientsEl = document.querySelector("#ingredients");
+];
+const listOfIngredientsEl = document.querySelector('#ingredients');
 
 const makeIngredientsList = options => {
   return options.map(options => {
-    const ingredientsList = document.createElement('li');
-    ingredientsList.textContent = options;
-    ingredientsList.classList.add("item");
-    return listOfIngredientsEl.append(ingredientsList);
+    const ingredientItem = document.createElement('li');
+    ingredientItem.textContent = options;
+    ingredientItem.classList.add('item');
+    return ingredientItem;
   });
 };
 
 const elements = makeIngredientsList(ingredients);
+listOfIngredientsEl.append(...elements);
